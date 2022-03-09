@@ -11,8 +11,11 @@
         android:theme="@style/Theme.PickApp1">
         <activity
             android:name=".DisplayActivity"
-            android:label="@string/app_name"
-            android:exported="false"/>
+            android:parentActivityName=".SelectionActivity"
+            android:exported="true"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SelectionActivity" />
         <activity
             android:name=".SelectionActivity"
             android:exported="true">

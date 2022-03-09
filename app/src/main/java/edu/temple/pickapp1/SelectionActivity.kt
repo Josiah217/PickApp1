@@ -3,10 +3,17 @@ package edu.temple.pickapp1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class SelectionActivity : AppCompatActivity() {
+
+    val secondActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        Log.d("Returned data", it.data?.getStringExtra("resultValue").toString())
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,10 +34,10 @@ class SelectionActivity : AppCompatActivity() {
         val myRecyclerViewFunc = {colorObject:ImageObject ->
             //mageView.setImageResource(colorObject.resourceId)
             //textView.text = colorObject.name
-            val intent = Intent(this,R.layout.activity_display:: class.java)
-            //intent.putExtra("image",colorObject.resourceId)
-            //intent.putExtra("name",colorObject.name)
-            startActivity(intent)
+            val intent = Intent(this,DisplayActivity:: class.java)
+            intent.putExtra("image",colorObject.resourceId)
+            intent.putExtra("name",colorObject.name)
+            secondActivityLauncher.launch(intent)
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
