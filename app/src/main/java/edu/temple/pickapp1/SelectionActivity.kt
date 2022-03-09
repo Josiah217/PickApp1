@@ -27,10 +27,10 @@ class SelectionActivity : AppCompatActivity() {
         val myRecyclerViewFunc = {colorObject:ImageObject ->
             //mageView.setImageResource(colorObject.resourceId)
             //textView.text = colorObject.name
-            //val intent = Intent(this,R.layout.activity_main2:: class.java)
+            val intent = Intent(this,R.layout.activity_display:: class.java)
             //intent.putExtra("image",colorObject.resourceId)
             //intent.putExtra("name",colorObject.name)
-            //startActivity(intent)
+            startActivity(intent)
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
