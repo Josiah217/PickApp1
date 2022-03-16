@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PickApp1</string>
+    <string name="MainTV">Choose a Pokemon</string>
 </resources>
