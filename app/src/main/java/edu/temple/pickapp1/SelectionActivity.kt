@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,17 +19,22 @@ class SelectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val array= resources.getStringArray(R.array.ListOfPokemon)
+        val titleView = findViewById<TextView>(R.id.textView);
+
+        titleView.text =  getString(R.string.MainTV)
+
         val colors = arrayOf(
-            ImageObject("Bulbasaur", R.drawable.a),
-            ImageObject("Charmander", R.drawable.b),
-            ImageObject("Squirtle", R.drawable.c),
-            ImageObject("Chikorita", R.drawable.d),
-            ImageObject("Cyndaquil", R.drawable.e),
-            ImageObject("Totodile", R.drawable.f),
-            ImageObject("Treecko", R.drawable.g),
-            ImageObject("Torchic", R.drawable.h),
-            ImageObject("Mudkip", R.drawable.i),
-            ImageObject("Mew", R.drawable.j)
+            ImageObject(array[0], R.drawable.a),
+            ImageObject(array[1], R.drawable.b),
+            ImageObject(array[2], R.drawable.c),
+            ImageObject(array[3], R.drawable.d),
+            ImageObject(array[4], R.drawable.e),
+            ImageObject(array[5], R.drawable.f),
+            ImageObject(array[6], R.drawable.g),
+            ImageObject(array[7], R.drawable.h),
+            ImageObject(array[8], R.drawable.i),
+            ImageObject(array[9], R.drawable.j)
         )
 
         val myRecyclerViewFunc = {colorObject:ImageObject ->
