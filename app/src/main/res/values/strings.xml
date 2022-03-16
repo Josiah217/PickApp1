@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PickApp1</string>
-    <string name="MainTV">Choose a Pokemon</string>
+    <string name="MainTV">Choose a Pokémon</string>
     <string-array name="ListOfPokemon">
         <item>Bulbasaur</item>
         <item>Charmander</item>

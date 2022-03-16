@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PickApp1</string>
+    <string name="MainTV">Choisissez un Pokémon</string>
+    <string-array name="ListOfPokemon">
+        <item>Bulbizarre</item>
+        <item>Salamèche</item>
+        <item>Carapuce</item>
+        <item>Germignon</item>
+        <item>Héricendre</item>
+        <item>Kaiminus</item>
+        <item>Arcko</item>
+        <item>Poussifeu</item>
+        <item>Gobou</item>
+        <item>Mew</item>
+    </string-array>
+</resources>
